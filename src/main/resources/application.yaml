@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: springCloudKafkaAvro
+  cloud:
+    stream:
+      schemaRegistryClient:
+        endpoint: http://127.0.0.1:8081
+      kafka:
+        binder:
+          useNativeEncoding: true
+          brokers: 127.0.0.1:9092
+        bindings:
+          output:
+            producer:
+              configuration:
+                schema.registry.url: http://127.0.0.1:8081
+                key.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+                value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      bindings:
+        output:
+          contentType: application/*+avro
+          destination: test_spring_cloud_kafka
