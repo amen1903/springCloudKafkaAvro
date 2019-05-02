@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.hmh.clm</groupId>
+	<groupId>com.springCloudKafkaAvro</groupId>
 	<artifactId>springCloudKafkaAvro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>springCloudKafkaAvro</name>
-	<description>Program Association License Mapping (PALM)</description>
+	<description>sample project demonstrating using spring cloud stream with kafka and the avro schema registry</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -104,14 +104,6 @@
 	</profiles>
 
 	<repositories>
-		<repository>
-			<id>hmh-releases-artifactory</id>
-			<name>libs-release-local</name>
-			<url>https://repo.br.hmheng.io/artifactory/libs-release-local</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
 		<repository>
 			<id>spring-libs-milestones</id>
 			<name>Spring Milestones</name>
