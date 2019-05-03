@@ -7,7 +7,6 @@ spring:
         endpoint: http://127.0.0.1:8081
       kafka:
         binder:
-          useNativeEncoding: true
           brokers: 127.0.0.1:9092
         bindings:
           output:
@@ -20,3 +19,5 @@ spring:
         output:
           contentType: application/*+avro
           destination: test_spring_cloud_kafka
+          producer:
+            useNativeEncoding: true
